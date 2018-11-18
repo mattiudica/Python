@@ -1,7 +1,7 @@
 #---CLASES Y OBJETOS---
 hello = 'Hi my name is '
 
-class Human(object):
+class Human:
 	def __init__(self, name, age, sex, job):
 		self.name=name
 		self.age=age
