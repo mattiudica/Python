@@ -19,12 +19,17 @@ print(d.values())							#Metodo .values(), idem .keys() pero con los valores.
 print(d)
 print(d.pop('Clave3',False))				#Metodo .pop(valor,d), elimina el valor pasado por parametro, d es opcional y es el retorno
 print(d)									#que elijamos en caso de que el valor no se encuentre, va a reemplazar al Error.
+											#Usar si quiero capturar el elemento aparte de removerlo del dicc.
 
 del d['Clave1']								#Metodo del diccionario[], elimina elemento por su clave.
-print(d)
-
+print(d)									#Usar simplemente para borrar el elemento del dicc
+											
 d.clear()									#Metodo .clear() borra todo el contenido dejando un diccionario vacio.
 print(d)
 
 d['clave_nueva'] = 'llenando nuevamente'	#Asi agrego elementos al diccionarios.
 print(d)
+
+
+#Usar si quiero capturar el elemento aparte de removerlo del dicc.
+#Usar simplemente para borrar el elemento del dicc
