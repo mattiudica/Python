@@ -9,42 +9,36 @@
 
 #---FUNC FILTER CON LAMBDA EN PYTHON 3---
 #A dif de la func map, filter solo toma funciones que devuelvan un booleano(True,False).
-lB = [1,-2,3,-4,5,-6]
-lC = [7,-8,9,-10,0,-1]
-filtB = filter(lambda x: x>0,lB)
-filtC = filter(lambda y: True if y >= 0 else False,lC)
+# lB = [1,-2,3,-4,5,-6]
+# lC = [7,-8,9,-10,0,-1]
+# filtB = filter(lambda x: x>0,lB)
+# filtC = filter(lambda y: True if y >= 0 else False,lC)
 
-print(lB)
-print(list(filtB))
-print(lC)
-print(list(filtC))
+# print(lB)
+# print(list(filtB))
+# print(lC)
+# print(list(filtC))
 
 #---EJERCICIO PARA FILTER---
-# listA = []
-# listB = []
+it1 = [1,-2,3,-4,0]
+it2 = [5,-6,7,-8,9]
+emptyListA = []
+emptyListB = []
 
-# a = 5
-# b = 10
-# c = 15
-# d = 20
+runAdd = map(lambda x,y: x+y,it1,it2)
+runSub = map(lambda x,y: x-y,it1,it2)
 
-# ops = [a+b,
-#  		b+a,
-# 		a+c,
-# 		c-a,
-# 		b+c,
-# 		c-b,
-# 	]
+result1=list(runAdd)
+result2=list(runSub)
 
-# for num in ops:
-# 	#while len(ops) > 0:
+def function_crossLists(a,b):
+	a.extend(b)
+	b.clear()
+	filtD = list(filter(lambda y: True if y >= 0 else False,a))
+	filtE = list(filter(lambda y: True if y <0 else False,a))
+	a.clear()
+	return a, filtD, filtE
 
-# 	if num < 15:
-# 		listA.append(num)
-# 		#ops.remove(num)
-# 	else:
-# 		listB.append(num)
-# 		#ops.remove(num)
-
-# print (ops,listA,listB)
+funcReturn = function_crossLists(result1,result2)
+print(list(funcReturn))
 
