@@ -28,17 +28,10 @@ emptyListB = []
 runAdd = map(lambda x,y: x+y,it1,it2)
 runSub = map(lambda x,y: x-y,it1,it2)
 
-result1=list(runAdd)
-result2=list(runSub)
+result1=list(runAdd)+list(runSub)
 
-def function_crossLists(a,b):
-	a.extend(b)
-	b.clear()
-	filtD = list(filter(lambda y: True if y >= 0 else False,a))
-	filtE = list(filter(lambda y: True if y <0 else False,a))
-	a.clear()
-	return a, filtD, filtE
+emptyListA = list(filter(lambda y: True if y >= 0 else False,result1))
+emptyListB = list(filter(lambda y: True if y <0 else False,result1))
+result1.clear()
 
-funcReturn = function_crossLists(result1,result2)
-print(list(funcReturn))
-
+print(result1,emptyListA,emptyListB)
