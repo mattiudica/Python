@@ -27,7 +27,7 @@
 # add = lambda x,y: x+y
 # product = lambda x,y,z: x*y*z
 
-# print (double(10))
+# print (product(10,2,0)+add(7,7)-double(0.5))
 
 a = [1,2,3]
 b = (9,8,7)
