@@ -2,7 +2,7 @@ from PIL import Image
 import os
 # Este script recorre el directorio y capta los archivos que finalizan en '.jpg', crea un archivo por cada uno
 # separando nombre y extension y luego los vuelve a guardar en otra carpeta con otra extension '.png'.
- for f in os.listdir('.'):
+for f in os.listdir('.'):
 	if f.endswith('.jpg'):
 		i = Image.open(f)
 		fn, fext = os.path.splitext(f)
