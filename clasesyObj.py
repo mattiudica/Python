@@ -8,13 +8,13 @@ class Human:
 		self.sex=sex
 		self.job=job
 
-	def speak(self, message):
+	def speak(self):
 		print (hello, self.name, self.age, self.sex, self.job)
 
 j = Human('John',28,'male','engineer')
 p = Human('Peter', 25,'male','barista')
 a = Human('Alexandra', 30,'female','doctor')
 
-j.speak("check")
-p.speak("check")
-a.speak("check")
+j.speak()
+p.speak()
+a.speak()
